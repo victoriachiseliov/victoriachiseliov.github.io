@@ -1,0 +1,563 @@
+/* =========================
+   COLOR VARIABLES
+========================= */
+
+:root {
+    --background: #ffffff;
+    --text: #252525;
+
+    --green: #4F7668;
+    --green-dark: #3F6256;
+    --green-heading: #667D73;
+
+    --secondary: #777777;
+    --muted: #999999;
+
+    --hover: #EEF4F1;
+
+    --button-background: #F7F9F8;
+    --button-border: #CFDCD5;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    color-scheme: light;
+}
+
+body {
+    margin: 0;
+    padding: 12px;
+
+    background: var(--background);
+    color: var(--text);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14.5px;
+    line-height: 1.5;
+
+    transition:
+        background-color 0.22s ease,
+        color 0.22s ease;
+}
+
+
+a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--green-dark);
+    text-decoration: underline;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+    max-width: 980px;
+
+    margin: 34px auto 60px;
+
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+
+    column-gap: 34px;
+}
+
+
+/* =========================
+   LEFT SIDEBAR
+========================= */
+
+.sidebar {
+    align-self: start;
+}
+
+
+.sidebar h1 {
+    margin: 0 0 7px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 26px;
+    line-height: 1.1;
+    font-weight: 500;
+
+    color: var(--text);
+
+    white-space: nowrap;
+}
+
+
+.position,
+.department,
+.institution {
+    margin: 0;
+
+    color: var(--secondary);
+
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 13.5px;
+    line-height: 1.45;
+}
+
+
+.institution {
+    margin-bottom: 24px;
+}
+
+
+.contact {
+    font-family: "Montserrat", Arial, sans-serif;
+
+    color: var(--secondary);
+
+    font-size: 12.5px;
+}
+
+
+.contact p {
+    margin: 0 0 15px;
+}
+
+
+.contact strong {
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+
+/* =========================
+   PROFILE BUTTONS
+========================= */
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 6px;
+}
+
+
+.profile-button {
+    display: inline-block;
+
+    padding: 6px 11px;
+
+    border: 1px solid var(--button-border);
+    border-radius: 16px;
+
+    background: var(--button-background);
+
+    color: var(--green);
+
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 11.5px;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+
+.profile-button:hover,
+.profile-button:focus-visible {
+    background: var(--hover);
+
+    color: var(--green-dark);
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.content {
+    min-width: 0;
+}
+
+
+/* =========================
+   PHOTO + BIO
+========================= */
+
+.intro {
+    display: grid;
+
+    grid-template-columns: 175px minmax(0, 1fr);
+
+    gap: 27px;
+
+    align-items: start;
+
+    margin-bottom: 31px;
+}
+
+
+.photo-column {
+    width: 175px;
+}
+
+
+.profile-photo {
+    display: block;
+
+    width: 175px;
+    height: auto;
+}
+
+
+.photo-credit {
+    margin: 5px 0 0;
+
+    text-align: right;
+
+    font-size: 10px;
+
+    color: var(--muted);
+}
+
+
+.photo-credit a {
+    color: var(--secondary);
+}
+
+
+.bio {
+    font-size: 14.5px;
+    line-height: 1.55;
+}
+
+
+.bio p {
+    margin: 0 0 11px;
+}
+
+
+/* =========================
+   MAIN SECTIONS
+========================= */
+
+.main-section {
+    margin-bottom: 34px;
+}
+
+
+h2 {
+    margin: 0 0 17px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    color: var(--green-heading);
+}
+
+
+h3 {
+    margin: 23px 0 10px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 15.5px;
+    font-weight: 600;
+
+    color: var(--green-dark);
+}
+
+
+h4 {
+    margin: 17px 0 7px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 13.5px;
+    font-weight: 600;
+
+    color: var(--secondary);
+}
+
+
+/* =========================
+   ENTRIES
+========================= */
+
+.entry {
+    margin-bottom: 16px;
+
+    font-size: 14.5px;
+    line-height: 1.48;
+}
+
+
+.entry.compact {
+    margin-bottom: 13px;
+}
+
+
+.entry p {
+    margin: 0 0 3px;
+}
+
+
+.entry-title {
+    font-weight: 500;
+}
+
+
+.entry-title a {
+    color: var(--green-dark);
+}
+
+
+.authors {
+    color: inherit;
+}
+
+
+.detail {
+    color: var(--secondary);
+
+    font-size: 13.5px;
+}
+
+
+.lecture-title {
+    color: inherit;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.links {
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 12.5px;
+}
+
+
+.links a {
+    color: var(--green);
+
+    font-weight: 500;
+}
+
+
+.links span {
+    margin: 0 5px;
+
+    color: var(--secondary);
+}
+
+
+.media-label {
+    margin: 0 !important;
+
+    color: var(--text) !important;
+}
+
+
+.course-link {
+    color: var(--green-dark);
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+.theme-toggle {
+    position: fixed;
+
+    top: 17px;
+    right: 20px;
+
+    z-index: 1000;
+
+    padding: 6px 11px;
+
+    border: 1px solid var(--button-border);
+    border-radius: 18px;
+
+    background: var(--button-background);
+
+    color: var(--green-dark);
+
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 11.5px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    background: var(--hover);
+
+    outline: none;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+
+    --background: #171B19;
+    --text: #E8ECEA;
+
+    --green: #A8CCBC;
+    --green-dark: #B7D8CA;
+    --green-heading: #A7BFB5;
+
+    --secondary: #AFB9B4;
+    --muted: #919C96;
+
+    --hover: #25312C;
+
+    --button-background: #202824;
+    --button-border: #496057;
+
+    color-scheme: dark;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 760px) {
+
+    .page {
+        display: block;
+
+        max-width: 680px;
+
+        margin-top: 24px;
+
+        padding: 0 10px;
+    }
+
+
+    .sidebar {
+        margin-bottom: 30px;
+    }
+
+
+    .sidebar h1 {
+        white-space: normal;
+    }
+
+
+    .contact {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        column-gap: 24px;
+    }
+
+
+    .intro {
+        grid-template-columns:
+            150px minmax(0, 1fr);
+
+        gap: 22px;
+    }
+
+
+    .photo-column,
+    .profile-photo {
+        width: 150px;
+    }
+
+
+    .theme-toggle {
+        top: 10px;
+        right: 10px;
+    }
+
+}
+
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 520px) {
+
+    body {
+        padding: 8px;
+    }
+
+
+    .page {
+        margin-top: 48px;
+
+        padding: 0 8px;
+    }
+
+
+    .contact {
+        display: block;
+    }
+
+
+    .intro {
+        display: block;
+    }
+
+
+    .photo-column {
+        width: 150px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .profile-photo {
+        width: 150px;
+    }
+
+
+    .sidebar h1 {
+        font-size: 25px;
+    }
+
+}
+
+.section-subtitle {
+    margin: -4px 0 16px;
+    color: var(--secondary);
+    font-size: 13.5px;
+    line-height: 1.45;
+}
